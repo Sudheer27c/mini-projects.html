@@ -17,9 +17,9 @@ h2 {
   margin: 25px 10px;
   padding: 10px;
   text-align: center;
-  background: linear-gradient(90deg, #8e2de2, #4a00e0);
+  background: linear-gradient(90deg, #91a760, #6c5b8d);
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(142, 45, 226, 0.7);
+  box-shadow: 0 0 10px rgba(136, 121, 86, 0.7);
 }
 audio {
   width: 95%;
@@ -27,24 +27,24 @@ audio {
   display: block;
   padding: 6px;
   border-radius: 6px;
-  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
-  box-shadow: 0 0 12px rgba(0, 173, 255, 0.6);
+  background: linear-gradient(90deg, #294b5a, #3388a4, #7e9eab);
+  box-shadow: 0 0 12px rgba(126, 138, 144, 0.6);
 }
 h3 {
   margin-left: 20px;
   color: #00d4ff;
-  text-shadow: 0 0 6px rgba(0, 212, 255, 0.8);
+  text-shadow: 0 0 6px rgba(120, 147, 152, 0.8);
 }
 img,
 video {
   display: block;
   margin: 15px auto;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 0, 150, 0.6);
+  box-shadow: 0 0 15px rgba(171, 102, 142, 0.6);
 }
 hr {
   border: none;
   height: 2px;
   margin: 30px;
-  background: linear-gradient(90deg, transparent, #ff00cc, transparent);
+  background: linear-gradient(90deg, transparent, #c86cb5, transparent);
 }

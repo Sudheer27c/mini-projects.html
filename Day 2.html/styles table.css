@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-attachment: fixed;
+}
+table {
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: none;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  animation: tableSlideIn 0.8s ease-out;
+}
+thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+}
+
+thead::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+}
+
+thead tr {
+  background: transparent;
+}
+
+thead th {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 20px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+thead th::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 25%;
+  height: 50%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+thead th:last-child::after {
+  display: none;
+}
+
+tbody tr {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+tbody tr:nth-child(1) {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+tbody tr:nth-child(2) {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+tbody tr:nth-child(3) {
+  background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+tbody tr:nth-child(4) {
+  background: linear-gradient(135deg, #fdcbf1 0%, #e6dee9 100%);
+}
+
+tbody tr:nth-child(5) {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+
+tbody tr:hover {
+  transform: scale(1.02);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 2px rgba(255, 255, 255, 0.5);
+  z-index: 10;
+}
+
+tbody th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 18px 25px;
+  text-align: center;
+  font-size: 1.05rem;
+  position: relative;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+tbody th::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+td {
+  padding: 18px 25px;
+  text-align: center;
+  font-size: 1rem;
+  color: #2d3748;
+  font-weight: 500;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+td::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+td:hover::before {
+  opacity: 1;
+}
+
+td:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 2px rgba(102, 126, 234, 0.3);
+  z-index: 5;
+}
+td[rowspan] {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  vertical-align: middle;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+}
+td[colspan] {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+}
+tfoot {
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+}
+
+tfoot td {
+  color: #ffffff;
+  font-weight: 600;
+  padding: 20px;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.95rem;
+  border: none;
+  letter-spacing: 0.5px;
+}
+table {
+  position: relative;
+}
+
+table::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.3) 0%,
+    rgba(118, 75, 162, 0.3) 50%,
+    rgba(240, 147, 251, 0.3) 100%
+  );
+  border-radius: 22px;
+  z-index: -1;
+  filter: blur(10px);
+  opacity: 0.7;
+}
+@keyframes tableSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+td:not(:last-child),
+th:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+tbody tr:not(:last-child) td,
+tbody tr:not(:last-child) th {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+@media screen and (max-width: 1024px) {
+  table {
+    font-size: 0.9rem;
+  }
+
+  thead th,
+  td,
+  tbody th {
+    padding: 15px 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  table {
+    font-size: 0.85rem;
+    border-radius: 15px;
+  }
+
+  thead th,
+  td,
+  tbody th {
+    padding: 12px 15px;
+  }
+
+  thead th {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  table {
+    font-size: 0.75rem;
+    border-radius: 10px;
+  }
+
+  thead th,
+  td,
+  tbody th {
+    padding: 10px 8px;
+  }
+
+  thead th {
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+  }
+
+  tfoot td {
+    font-size: 0.8rem;
+    padding: 15px;
+  }
+}
+tbody tr {
+  backdrop-filter: blur(10px);
+}
+tbody tr:hover {
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.2),
+    0 0 30px rgba(102, 126, 234, 0.4),
+    inset 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+table {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
